@@ -16,7 +16,36 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<activeProfile>production</activeProfile>
 	</properties>
+	<profiles>
+	<!--Your default profile... selected if none specified-->
+	<profile>
+		<id>production</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<properties>
+			<activeProfile>production</activeProfile>
+		</properties>
+	</profile>
+
+	<!--Profile 2-->
+	<profile>
+		<id>development</id>
+		<properties>
+			<activeProfile>development</activeProfile>
+		</properties>
+	</profile>
+
+	<!--Profile 3-->
+	<profile>
+		<id>otherprofile</id>
+		<properties>
+			<activeProfile>otherprofile</activeProfile>
+		</properties>
+	</profile>
+	</profiles>
 
 	<dependencies>
 		<dependency>
